@@ -1,0 +1,157 @@
+.profile-selector-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-selector-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 12px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  min-width: 200px;
+}
+
+.profile-selector-trigger:hover {
+  border-color: #bbb;
+}
+
+.dropdown-arrow {
+  font-size: 10px;
+  color: #666;
+}
+
+.profile-selector-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 4px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  min-width: 250px;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.profile-selector-search {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.profile-selector-search .search-input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.profile-selector-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.profile-selector-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+
+.profile-selector-item:hover {
+  background: #f5f5f5;
+}
+
+.profile-selector-item.selected {
+  background: #f0f0ff;
+  color: #6366f1;
+  font-weight: 500;
+}
+
+.profile-name {
+  flex: 1;
+}
+
+.checkmark {
+  color: #6366f1;
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+.profile-selector-add {
+  padding: 8px;
+  border-top: 1px solid #eee;
+  background: #fafafa;
+}
+
+.add-profile-form {
+  display: flex;
+  gap: 8px;
+}
+
+.profile-name-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.add-profile-submit-btn {
+  padding: 8px 16px;
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.add-profile-submit-btn:hover {
+  background: #4f46e5;
+}
+
+.add-profile-placeholder {
+  display: flex;
+  gap: 8px;
+}
+
+.add-profile-input-placeholder {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  background: white;
+  cursor: pointer;
+  color: #999;
+}
+
+.add-profile-btn {
+  padding: 8px 16px;
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.add-profile-btn:hover {
+  background: #4f46e5;
+}
+
+

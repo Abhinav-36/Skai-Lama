@@ -1,0 +1,102 @@
+.event-logs {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+}
+
+.event-logs h3 {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.event-logs-modal {
+  min-height: 200px;
+}
+
+.no-logs {
+  color: #999;
+  font-size: 14px;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.logs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.log-entry {
+  padding: 16px 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e5e5;
+}
+
+.log-timestamp {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.clock-icon {
+  font-size: 14px;
+  color: #666;
+}
+
+.log-changes {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.change-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 14px;
+  flex-wrap: wrap;
+}
+
+.change-text {
+  color: #666;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.change-field {
+  font-weight: 600;
+  color: #333;
+  min-width: 120px;
+  text-transform: capitalize;
+}
+
+.change-old {
+  color: #dc3545;
+  text-decoration: line-through;
+  padding: 2px 6px;
+  background: #ffe6e6;
+  border-radius: 3px;
+}
+
+.change-arrow {
+  color: #666;
+  font-weight: bold;
+}
+
+.change-new {
+  color: #28a745;
+  padding: 2px 6px;
+  background: #e6f7ed;
+  border-radius: 3px;
+}
+
+

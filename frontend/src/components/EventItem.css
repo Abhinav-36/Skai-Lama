@@ -1,0 +1,130 @@
+.event-item {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.event-header {
+  margin-bottom: 15px;
+}
+
+.event-profiles {
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.event-profiles::before {
+  content: '👥';
+  font-size: 18px;
+}
+
+.event-details {
+  margin-bottom: 15px;
+}
+
+.event-time {
+  margin-bottom: 12px;
+}
+
+.time-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.time-row .label {
+  color: #666;
+  min-width: 50px;
+  font-weight: 500;
+}
+
+.time-row .value {
+  color: #333;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.time-row .value::before {
+  content: '📅';
+  font-size: 14px;
+}
+
+.time-row .time-value {
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 8px;
+}
+
+.time-row .time-value::before {
+  content: '🕐';
+  font-size: 14px;
+}
+
+.event-meta {
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+}
+
+.meta-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 6px;
+  font-size: 12px;
+}
+
+.meta-label {
+  color: #999;
+  min-width: 70px;
+}
+
+.meta-value {
+  color: #666;
+}
+
+.event-actions {
+  display: flex;
+  gap: 10px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.edit-btn,
+.logs-btn {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: white;
+  color: #333;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+
+.edit-btn:hover,
+.logs-btn:hover {
+  background: #f5f5f5;
+  border-color: #bbb;
+}
+
+.logs-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+

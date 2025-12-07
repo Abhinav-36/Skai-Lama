@@ -1,0 +1,17 @@
+.event-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.event-list.empty {
+  padding: 40px;
+  text-align: center;
+  color: #999;
+}
+
+.event-list.empty p {
+  font-size: 14px;
+}
+
+
