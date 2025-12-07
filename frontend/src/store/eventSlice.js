@@ -128,7 +128,7 @@ const eventSlice = createSlice({
       })
       .addCase(fetchEvents.fulfilled, (state, action) => {
         state.loading = false;
-        state.events = action.payload;
+        state.events = Array.isArray(action.payload) ? action.payload : [];
       })
       .addCase(fetchEvents.rejected, (state, action) => {
         state.loading = false;

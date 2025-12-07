@@ -53,6 +53,7 @@ const EventManagement = () => {
   };
 
   const filteredEvents = useMemo(() => {
+    if (!Array.isArray(events)) return [];
     if (!selectedProfileIds.length) return events;
     
     const ids = new Set(selectedProfileIds);
