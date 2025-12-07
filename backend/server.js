@@ -14,9 +14,13 @@ app.use(
 );
 app.use(express.json());
 
-const MONGODB_URI = process.env.MONGODB_URI;
+const encodedUser = encodeURIComponent(process.env.MONGODB_USER);
+const encodedPass = encodeURIComponent(process.env.MONGODB_PASSWORD);
 
-mongoose.connect(MONGODB_URI)
+// Build encoded MongoDB URI
+const MONGO_URI = `mongodb+srv://${encodedUser}:${encodedPass}@cluster0.dmemj4s.mongodb.net/?appName=Cluster0`;
+
+mongoose.connect(MONGO_URI)
   .then(() => console.log('MongoDB Connected'))
   .catch(err => console.error('MongoDB connection error:', err));
 
