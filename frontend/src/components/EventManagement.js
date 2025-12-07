@@ -58,7 +58,7 @@ const EventManagement = () => {
     
     const ids = new Set(selectedProfileIds);
     return events.filter(evt => 
-      evt.profiles.some(p => ids.has(p._id))
+      Array.isArray(evt.profiles) && evt.profiles.some(p => ids.has(p._id))
     );
   }, [events, selectedProfileIds]);
 

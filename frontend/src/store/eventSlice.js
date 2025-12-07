@@ -104,7 +104,7 @@ const eventSlice = createSlice({
       })
       .addCase(fetchProfiles.fulfilled, (state, action) => {
         state.loading = false;
-        state.profiles = action.payload;
+        state.profiles = Array.isArray(action.payload) ? action.payload : [];
       })
       .addCase(fetchProfiles.rejected, (state, action) => {
         state.loading = false;
@@ -116,6 +116,9 @@ const eventSlice = createSlice({
       })
       .addCase(createProfile.fulfilled, (state, action) => {
         state.loading = false;
+        if (!Array.isArray(state.profiles)) {
+          state.profiles = [];
+        }
         state.profiles.push(action.payload);
       })
       .addCase(createProfile.rejected, (state, action) => {

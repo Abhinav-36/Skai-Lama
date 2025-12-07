@@ -6,7 +6,7 @@ import './EventLogs.css';
 const EventLogs = ({ logs }) => {
   const selectedTimezone = useSelector((state) => state.event.selectedTimezone);
 
-  if (!logs || logs.length === 0) {
+  if (!logs || !Array.isArray(logs) || logs.length === 0) {
     return (
       <div className="event-logs-modal">
         <p className="no-logs">No update history yet</p>
@@ -18,15 +18,16 @@ const EventLogs = ({ logs }) => {
     <div className="event-logs-modal">
       <div className="logs-list">
         {logs.map((log, idx) => {
-          const hasTzChange = log.changes.some(c => c.field === 'timezone');
+          const logChanges = Array.isArray(log.changes) ? log.changes : [];
+          const hasTzChange = logChanges.some(c => c.field === 'timezone');
           const changes = hasTzChange
-            ? log.changes.filter(c => {
+            ? logChanges.filter(c => {
                 const isDT = c.field === 'startDateTime' || c.field === 'startDate' || 
                            c.field === 'startTime' || c.field === 'endDateTime' || 
                            c.field === 'endDate' || c.field === 'endTime';
                 return !isDT;
               })
-            : log.changes;
+            : logChanges;
 
           return (
             <div key={idx} className="log-entry">

@@ -43,7 +43,9 @@ const EventItem = ({ event, onEdit }) => {
     [event.updatedAt, selectedTimezone]
   );
 
-  const profileNames = event.profiles.map(p => p.name).join(', ');
+  const profileNames = Array.isArray(event.profiles) 
+    ? event.profiles.map(p => p.name).join(', ')
+    : '';
 
   return (
     <div className="event-item">

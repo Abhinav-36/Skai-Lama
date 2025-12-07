@@ -14,7 +14,7 @@ const ProfileSelector = () => {
   const dropdownRef = useRef(null);
 
   const currentProfileName = useMemo(() => {
-    if (!selectedProfileIds.length) return 'Select current profile...';
+    if (!Array.isArray(profiles) || !selectedProfileIds.length) return 'Select current profile...';
     const p = profiles.find(p => p._id === selectedProfileIds[0]);
     return p?.name || 'Select current profile...';
   }, [profiles, selectedProfileIds]);
@@ -55,6 +55,7 @@ const ProfileSelector = () => {
   };
 
   const filteredProfiles = useMemo(() => {
+    if (!Array.isArray(profiles)) return [];
     if (!searchQuery.trim()) return profiles;
     const q = searchQuery.toLowerCase();
     return profiles.filter(p => p.name.toLowerCase().includes(q));

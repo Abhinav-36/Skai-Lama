@@ -29,7 +29,7 @@ const EventForm = ({ event, onClose, onSuccess }) => {
       const start = getDateTimeInputValue(event.startDateTime, event.timezone);
       const end = getDateTimeInputValue(event.endDateTime, event.timezone);
       setFormData({
-        selectedProfiles: event.profiles.map(p => p._id),
+        selectedProfiles: Array.isArray(event.profiles) ? event.profiles.map(p => p._id) : [],
         timezone: event.timezone,
         startDate: start.date,
         startTime: start.time || '00:00',
@@ -85,6 +85,7 @@ const EventForm = ({ event, onClose, onSuccess }) => {
   };
 
   const filteredProfiles = useMemo(() => {
+    if (!Array.isArray(profiles)) return [];
     if (!searchText.trim()) return profiles;
     const q = searchText.toLowerCase();
     return profiles.filter(p => p.name.toLowerCase().includes(q));
